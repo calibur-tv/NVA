@@ -6,7 +6,7 @@
     <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren)&&!item.alwaysShow">
       <app-link :to="resolvePath(onlyOneChild.path)">
         <el-menu-item 
-          :index="resolvePath(onlyOneChild.path)" 
+          :index="resolveIndex(onlyOneChild.path)"
           :class="{'submenu-title-noDropdown':!isNest}">
           <item 
             v-if="onlyOneChild.meta" 
@@ -40,7 +40,7 @@
           v-else 
           :to="resolvePath(child.path)" 
           :key="child.name">
-          <el-menu-item :index="resolvePath(child.path)">
+          <el-menu-item :index="resolveIndex(child.path)">
             <item 
               v-if="child.meta" 
               :icon="mapIcon(child.meta.icon)"
@@ -118,6 +118,12 @@ export default {
         return path.resolve(this.basePath, arr.join('/'))
       }
       return path.resolve(this.basePath, routePath)
+    },
+    resolveIndex(routePath) {
+      if (this.isExternalLink(routePath)) {
+        return routePath
+      }
+      return `${this.resolvePath(routePath)}/`
     },
     isExternalLink(routePath) {
       return isExternal(routePath)

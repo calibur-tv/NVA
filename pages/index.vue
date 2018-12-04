@@ -5,7 +5,7 @@
 <script>
 export default {
   asyncData({ redirect }) {
-    redirect('/dashboard')
+    redirect('/dashboard/')
   }
 }
 </script>

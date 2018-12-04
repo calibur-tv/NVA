@@ -116,7 +116,7 @@ export default {
                 expires: 1
               })
               this.$toast.success('登录成功')
-              window.location = '/dashboard'
+              window.location = '/dashboard/'
             })
             .catch(() => {
               this.loading = false

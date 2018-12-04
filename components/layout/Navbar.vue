@@ -49,7 +49,7 @@ export default {
     logout() {
       this.$store.commit('USER_LOGOUT')
       this.$cookie.remove('JWT-TOKEN')
-      window.location = '/login'
+      window.location = '/login/'
     }
   }
 }

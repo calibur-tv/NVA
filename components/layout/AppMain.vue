@@ -17,7 +17,7 @@ export default {
   name: 'AppMain',
   computed: {
     indexStyle() {
-      if (this.$route.path === '/dashboard') {
+      if (this.$route.path === '/dashboard/') {
         return {
           backgroundColor: '#f0f2f5'
         }
