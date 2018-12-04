@@ -7,7 +7,9 @@ const resolve = dir => path.join(__dirname, '', dir)
 
 module.exports = {
   mode: 'spa',
-
+  env: {
+    API_URL: 'YOUR_API_BASE_URL'
+  },
   /*
   ** Headers of the page
   */

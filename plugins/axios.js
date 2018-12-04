@@ -21,6 +21,11 @@ export default ({ $axios, redirect, app }) => {
     $axios.setToken(app.store.state.user.token, 'Bearer')
   }
 
+  $axios.onRequest(config => {
+    config.baseURL = process.env.API_URL
+    return config
+  })
+
   $axios.onResponse(resp => resp.data)
 
   $axios.onError(error => {
