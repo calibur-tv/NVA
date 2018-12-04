@@ -11,13 +11,6 @@ $ yarn install
 
 # serve with hot reload at localhost:9091
 $ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
 ```
 
 ## 认证
