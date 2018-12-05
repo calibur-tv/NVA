@@ -65,7 +65,7 @@ export default {
         return
       }
       if (path === '/dashboard') {
-        return this.$router.push('/dashboard')
+        return this.$router.push('/dashboard/')
       }
       this.$router.push(this.pathCompile(path))
     }
