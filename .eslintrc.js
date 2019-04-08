@@ -17,6 +17,7 @@ module.exports = {
     'vue/this-in-template': 'warn',
     'vue/no-unused-vars': 'warn',
     'vue/no-v-html': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
     'vue/space-infix-ops': 1,
     'quotes': [1, 'single'],
     'semi': [2, 'never'],

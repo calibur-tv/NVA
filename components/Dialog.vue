@@ -106,7 +106,9 @@
         v-if="!clickClose || close"
         :class="$style.close"
         @click="cancel"
-      >&times;</button>
+      >
+        &times;
+      </button>
       <main
         :style="computeDialogHeight"
         :class="$style.content"
@@ -114,7 +116,7 @@
       >
         <template v-if="scroll">
           <ul ref="ul">
-            <slot/>
+            <slot />
           </ul>
           <slot
             v-if="loading"
@@ -131,7 +133,7 @@
             <p :class="$style.noMore">没有更多了</p>
           </slot>
         </template>
-        <slot v-else/>
+        <slot v-else />
       </main>
       <footer
         v-if="footer"

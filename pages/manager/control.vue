@@ -1,11 +1,11 @@
 <template>
   <div
-    v-loading="loading"
     id="manager-control"
+    v-loading="loading"
   >
     <header class="page-header">
       <el-button type="primary">
-        <i class="el-icon-plus"/>
+        <i class="el-icon-plus" />
         添加管理员
       </el-button>
     </header>

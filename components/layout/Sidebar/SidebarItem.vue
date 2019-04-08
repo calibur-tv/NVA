@@ -1,55 +1,60 @@
 <template>
-  <div 
+  <div
     v-if="!item.hidden && item.children && mapVisit(item.meta.title)"
-    class="menu-wrapper">
-
-    <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren)&&!item.alwaysShow">
+    class="menu-wrapper"
+  >
+    <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children || onlyOneChild.noShowingChildren) && !item.alwaysShow">
       <app-link :to="resolvePath(onlyOneChild.path)">
-        <el-menu-item 
+        <el-menu-item
           :index="resolveIndex(onlyOneChild.path)"
-          :class="{'submenu-title-noDropdown':!isNest}">
-          <item 
-            v-if="onlyOneChild.meta" 
-            :icon="mapIcon(onlyOneChild.meta.icon||item.meta.icon)"
-            :title="mapTitle(onlyOneChild.meta.title)" />
+          :class="{'submenu-title-noDropdown':!isNest}"
+        >
+          <item
+            v-if="onlyOneChild.meta"
+            :icon="mapIcon(onlyOneChild.meta.icon || item.meta.icon)"
+            :title="mapTitle(onlyOneChild.meta.title)"
+          />
         </el-menu-item>
       </app-link>
     </template>
 
-    <el-submenu 
-      v-else 
-      :index="resolvePath(item.path)">
+    <el-submenu
+      v-else
+      :index="resolvePath(item.path)"
+    >
       <template slot="title">
-        <item 
-          v-if="item.meta" 
+        <item
+          v-if="item.meta"
           :icon="mapIcon(item.meta.icon)"
-          :title="mapTitle(item.meta.title)" />
+          :title="mapTitle(item.meta.title)"
+        />
       </template>
-
-      <template 
-        v-for="child in item.children" 
-        v-if="!child.hidden && mapVisit(child.meta.title)">
-        <sidebar-item
-          v-if="child.children&&child.children.length>0"
-          :is-nest="true"
-          :item="child"
-          :key="child.path"
-          :base-path="resolvePath(child.path)"
-          class="nest-menu" />
-        <app-link 
-          v-else 
-          :to="resolvePath(child.path)" 
-          :key="child.name">
-          <el-menu-item :index="resolveIndex(child.path)">
-            <item 
-              v-if="child.meta" 
-              :icon="mapIcon(child.meta.icon)"
-              :title="mapTitle(child.meta.title)" />
-          </el-menu-item>
-        </app-link>
+      <template v-for="child in item.children">
+        <template v-if="!child.hidden && mapVisit(child.meta.title)">
+          <sidebar-item
+            v-if="child.children && child.children.length > 0"
+            :key="child.path"
+            :is-nest="true"
+            :item="child"
+            :base-path="resolvePath(child.path)"
+            class="nest-menu"
+          />
+          <app-link
+            v-else
+            :key="child.name"
+            :to="resolvePath(child.path)"
+          >
+            <el-menu-item :index="resolveIndex(child.path)">
+              <item
+                v-if="child.meta"
+                :icon="mapIcon(child.meta.icon)"
+                :title="mapTitle(child.meta.title)"
+              />
+            </el-menu-item>
+          </app-link>
+        </template>
       </template>
     </el-submenu>
-
   </div>
 </template>
 

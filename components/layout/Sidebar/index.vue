@@ -14,7 +14,8 @@
         v-for="route in routes"
         :key="route.path"
         :item="route"
-        :base-path="route.path"/>
+        :base-path="route.path"
+      />
     </el-menu>
   </el-scrollbar>
 </template>
