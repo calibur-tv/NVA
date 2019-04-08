@@ -4,10 +4,7 @@
     id="manager-control"
   >
     <header class="page-header">
-      <el-button
-        type="primary"
-        @click="addAdmin"
-      >
+      <el-button type="primary">
         <i class="el-icon-plus"/>
         添加管理员
       </el-button>

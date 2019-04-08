@@ -3,6 +3,7 @@ import { Message } from 'element-ui'
 import permission from '~/assets/js/permission'
 
 export default ({ app, store, route, redirect }) => {
+  return
   const { user } = store.state
   const token = Cookies.get('JWT-TOKEN')
   const loginPath = '/login/'

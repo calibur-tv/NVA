@@ -1,7 +1,3 @@
-const webpack = require('webpack')
-const CompressionPlugin = require('compression-webpack-plugin')
-const BrotliPlugin = require('brotli-webpack-plugin')
-const isDev = process.env.NODE_ENV === 'development'
 const path = require('path')
 const resolve = dir => path.join(__dirname, '', dir)
 
@@ -109,7 +105,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vue-awesome', 'lodash'],
     /*
      ** You can extend webpack config here
      */
@@ -126,21 +121,7 @@ module.exports = {
     },
     extractCSS: true,
     plugins: (() => {
-      const result = [
-        new webpack.ProvidePlugin({
-          _: 'lodash'
-        })
-      ]
-      return isDev
-        ? result.concat([])
-        : result.concat([
-            new CompressionPlugin({
-              test: /\.(js|css|html)$/
-            }),
-            new BrotliPlugin({
-              test: /\.(js|css|html)$/
-            })
-          ])
+      return []
     })(),
     babel: {}
   }
