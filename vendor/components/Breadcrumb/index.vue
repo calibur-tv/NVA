@@ -5,12 +5,12 @@
   >
     <transition-group name="breadcrumb">
       <el-breadcrumb-item
-        v-for="(item,index) in levelList"
+        v-for="item in levelList"
         :key="item.path"
       >
         <template v-if="item.meta.title">
           <span
-            v-if="item.redirect === 'noredirect' || index == levelList.length - 1"
+            v-if="item.path !== '/dashboard'"
             class="no-redirect"
           >{{ mapTitle(item.meta.title) }}</span>
           <a

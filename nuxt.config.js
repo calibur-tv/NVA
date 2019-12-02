@@ -92,7 +92,7 @@ module.exports = {
   ],
 
   styleResources: {
-    sass: ['~/assets/css/variables.scss', '~/assets/css/mixins.scss']
+    scss: ['~/assets/css/variables.scss', '~/assets/css/mixins.scss']
   },
   /*
   ** Axios module configuration

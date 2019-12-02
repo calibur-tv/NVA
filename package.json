@@ -14,22 +14,22 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.4.1",
-    "cross-env": "^5.2.0",
-    "element-ui": "^2.7.2",
-    "js-cookie": "^2.2.0",
-    "koa": "^2.7.0",
+    "@nuxtjs/axios": "^5.8.0",
+    "cross-env": "^6.0.3",
+    "element-ui": "^2.13.0",
+    "js-cookie": "^2.2.1",
+    "koa": "^2.11.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.6.1"
+    "nuxt": "^2.10.2"
   },
   "devDependencies": {
-    "@nuxtjs/style-resources": "^0.1.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.0.1",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^5.2.2",
-    "node-sass": "^4.10.0",
-    "nodemon": "^1.11.0",
-    "sass-loader": "^7.1.0"
+    "@nuxtjs/style-resources": "^1.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-vue": "^6.0.1",
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.1",
+    "sass-loader": "^8.0.0"
   }
 }
