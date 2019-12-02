@@ -1,6 +1,6 @@
 # NVA 由 nuxt.js 和 vue.js 为依赖，vue-element-admin 为基础的后台SPA
 
-1. [Nuxt.js v.2.3.4](https://github.com/nuxt/nuxt.js/releases/tag/v2.3.4)
+1. [Nuxt.js v.2.10.2](https://github.com/nuxt/nuxt.js/releases/tag/v2.10.2)
 2. [vue-element-admin v3.9.3](https://github.com/PanJiaChen/vue-element-admin/releases/tag/v3.9.3)
 
 ## 运行
